@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Music Player</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="ticker-container">
+        <div class="ticker-text" id="ticker-text"></div>
+    </div>
+
+    <div class="player-container" id="player-container">
+        <img src="images/jesusisking.png" alt="Album Cover" class="album-cover" id="album-cover">
+
+        <div class="track-info">
+            <div class="track-name" id="current-track-name">No Track Loaded</div>
+            <div class="track-artist" id="current-track-artist">Please Pick a Track</div>
+        </div>
+
+        <div class="progress-bar" id="progress-bar">
+            <div class="progress" id="progress"></div>
+            <div class="hover-time" id="hover-time"></div>
+        </div>
+
+        <div class="time-stamps">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:00</span>
+        </div>
+
+        <div class="controls">
+            <span id="back">Back</span>
+            <span id="play-pause-button">Play</span>
+            <span id="skip">Skip</span>
+        </div>
+
+        <div class="tracklist-container" id="tracklist-container">
+            <!-- Track items will be added dynamically -->
+        </div>
+    </div>
+
+    <div id="loading-message" class="loading">Loading...</div>
+
+    <audio id="audio-player"></audio>
+
+    <script src="js/config.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>

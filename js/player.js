@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTrackIndex = 0;
     let isPlaying = false;
 
-    // Ensure trackList and albumCover are loaded from config.js
     if (typeof window.trackList === 'undefined') {
         throw new Error('Track list is not defined. Please check config.js.');
     }
@@ -105,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const width = rect.width;
         const duration = audioPlayer.duration;
         audioPlayer.currentTime = (clickX / width) * duration;
-        progress.style.width = (clickX / width) * 100 + '%'; // Update progress bar visually
+        progress.style.width = (clickX / width) * 100 + '%'; 
     });
 
     progressBar.addEventListener('mousemove', (e) => {
@@ -135,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     }
 
-    // Initialize the player and hide loading message
     window.addEventListener('load', () => {
         loadingMessage.style.display = 'none';
         playerContainer.style.display = 'block';
